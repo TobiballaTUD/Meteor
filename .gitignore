@@ -2,6 +2,7 @@
 [Tt]emp/
 [Oo]bj/
 WebGL/
+Logs/
 Assets/AssetStoreTools*
 
 # Visual Studio cache directory
