@@ -265,7 +265,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -301.2, y: 69}
+  m_AnchoredPosition: {x: -265, y: 126}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &317480041
@@ -783,6 +783,7 @@ GameObject:
   - component: {fileID: 1002311189}
   - component: {fileID: 1002311188}
   - component: {fileID: 1002311187}
+  - component: {fileID: 1002311190}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -851,6 +852,19 @@ RectTransform:
   m_AnchoredPosition: {x: 108.20001, y: -62.399994}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1002311190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002311186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1260c3cf78e08fc498f42ce7c3c0863a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 1002311187}
 --- !u!1 &1049253634 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1824972043381806, guid: 38b63c01674358b448b15ee3a56538f5, type: 3}
