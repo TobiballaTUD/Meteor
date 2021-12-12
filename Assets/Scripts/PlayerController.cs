@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    private Rigidbody playerRb;
     public float horizontalInput;
-    public float speed = 50.0f;
-    public float xRange = 140.0f;
+    public float speed = 80.0f;
+    public float xRange = 88.0f;
+    public bool isInSpace = true;
+    public bool gameOver = false;
 
     //Missile
     public GameObject projectilePrefab;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        playerRb = GetComponent<Rigidbody>();   
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (transform.position.x < -xRange)
@@ -38,4 +39,17 @@ public class PlayerController : MonoBehaviour
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
     }
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.CompareTag("space"))
+            {
+                isInSpace = true;
+            }
+
+            else if (collision.gameObject.CompareTag("meteor"))
+            {
+                Debug.Log("Game Over");
+                gameOver = true;
+            }
+        }
 }

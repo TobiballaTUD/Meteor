@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DetectCollisions : MonoBehaviour
+public class CreateExplosion : MonoBehaviour
 {
     private ScoreManager scoreManagerScript;
+    public ParticleSystem explosionParticle;
 
     void Start()
     {
@@ -18,8 +19,9 @@ public class DetectCollisions : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("missile")){
-            scoreManagerScript.AddPoint();
+        if (other.gameObject.CompareTag("meteor"))
+        {
+            Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
         }
 
         Destroy(gameObject);

@@ -4,8 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - explode
   - meteor
+  - space
+  - boom
+  - eventSystem
+  - missile
   layers:
   - Default
   - TransparentFX
