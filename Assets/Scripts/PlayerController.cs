@@ -8,8 +8,6 @@ public class PlayerController : MonoBehaviour
     public float horizontalInput;
     public float speed = 80.0f;
     public float xRange = 88.0f;
-    public bool isInSpace = true;
-    public bool gameOver = false;
 
     //Missile
     public GameObject projectilePrefab;
@@ -39,17 +37,4 @@ public class PlayerController : MonoBehaviour
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
     }
-        private void OnCollisionEnter(Collision collision)
-        {
-            if (collision.gameObject.CompareTag("space"))
-            {
-                isInSpace = true;
-            }
-
-            else if (collision.gameObject.CompareTag("meteor"))
-            {
-                Debug.Log("Game Over");
-                gameOver = true;
-            }
-        }
 }

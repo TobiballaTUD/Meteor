@@ -20,4 +20,9 @@ public class Menu : MonoBehaviour
     {
         Application.OpenURL("https://github.com/TobiballaTUD/Meteor");
     }
+
+    public void Controls()
+    {
+
+    }
 }
